@@ -72,7 +72,7 @@ function Write-Log {
 function Remove-TempFiles {
     Remove-Item -Path $destinationPath -Recurse -Force 2>&1 | Write-Log
     Remove-Item -Path $installMountDir -Recurse -Force 2>&1 | Write-Log
-    Remove-Item -Path "$env:SystemDrive\WIDTemp" -Recurse -Force 2>&1 | Write-Log
+    Remove-Item -Path "$env:G:\WIDTemp" -Recurse -Force 2>&1 | Write-Log
 }
 
 # Force Remove Function
@@ -116,7 +116,7 @@ function Get-WimInfo {
 }
 
 # Oscdimg Path
-$OscdimgPath = "$env:SystemDrive\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg"
+$OscdimgPath = "$env:G:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg"
 $Oscdimg = Join-Path -Path $OscdimgPath -ChildPath 'oscdimg.exe'
 
 # Autounattend.xml Path
@@ -155,8 +155,8 @@ else {
 }
 
 $sourceDrive = "${sourceDriveLetter}:\" # Source Drive of ISO
-$destinationPath = "$env:SystemDrive\WIDTemp\winlite"   # Destination Path
-$installMountDir = "$env:SystemDrive\WIDTemp\mountdir\installWIM"   # Mount Directory
+$destinationPath = "$env:G:\WIDTemp\winlite"   # Destination Path
+$installMountDir = "$env:G:\WIDTemp\mountdir\installWIM"   # Mount Directory
 
 # Copy Files
 Write-Host "`nCopying files from $sourceDrive to $destinationPath"
@@ -730,7 +730,7 @@ do {
         
         try {
             $bootWimPath = Join-Path $destinationPath "sources\boot.wim"
-            $bootMountDir = "$env:SystemDrive\WIDTemp\mountdir\bootWIM"
+            $bootMountDir = "$env:G:\WIDTemp\mountdir\bootWIM"
             New-Item -ItemType Directory -Path $bootMountDir 2>&1 | Write-Log
             Mount-WindowsImage -ImagePath $bootWimPath -Index 2 -Path $bootMountDir 2>&1 | Write-Log
 
