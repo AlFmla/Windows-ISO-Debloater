@@ -2,7 +2,7 @@
 $scriptUrl = "https://itsnileshhere.github.io/Windows-ISO-Debloater/isoDebloaterScript.ps1"
 $autounattendXmlUrl = "https://itsnileshhere.github.io/Windows-ISO-Debloater/autounattend.xml"
 
-$scriptDirectory = "$env:SystemDrive\scriptdir"
+$scriptDirectory = "$env:G:\scriptdir"
 
 if (-not (Test-Path -Path $scriptDirectory -PathType Container)) {
     New-Item -ItemType Directory -Path $scriptDirectory > $null 2>&1
