@@ -260,7 +260,7 @@ $appxPatternsToRemove = @(
     "MicrosoftCorporationII.QuickAssist*", # QuickAssist
     "Microsoft.SkypeApp*", # Skype
     "Microsoft.MicrosoftSolitaireCollection*", # SolitaireCollection
-    # "Microsoft.WindowsSoundRecorder*", # SoundRecorder
+    "Microsoft.WindowsSoundRecorder*", # SoundRecorder
     "MicrosoftTeams*", # Teams_old
     "MSTeams*", # Teams
     "Microsoft.Todos*", # Todos
@@ -272,9 +272,14 @@ $appxPatternsToRemove = @(
     "Microsoft.XboxGamingOverlay*", # XboxGamingOverlay
     "Microsoft.XboxSpeechToTextOverlay*", # XboxSpeechToTextOverlay
     "Microsoft.Xbox.TCUI*", # XboxTCUI
-    # "Microsoft.SecHealthUI*",
     "MicrosoftWindows.CrossDevice*", # CrossDevice
-    "Microsoft.BingSearch*" # Bing Search
+    "Microsoft.BingSearch*", # Bing Search
+    "Microsoft.SecHealthUI*",
+    "Microsoft.WindowsAppRuntime*",
+	"Microsoft.UI.Xaml*",
+	"Microsoft.VCLibs.140.00.UWP*",
+	"Microsoft.NET.Native.Framework*",
+	"Microsoft.DesktopAppInstaller*"
 )
 
 $capabilitiesToRemove = @(
