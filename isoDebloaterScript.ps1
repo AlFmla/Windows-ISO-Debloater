@@ -276,10 +276,10 @@ $appxPatternsToRemove = @(
     "Microsoft.BingSearch*", # Bing Search
     "Microsoft.SecHealthUI*",
     "Microsoft.WindowsAppRuntime*",
-	"Microsoft.UI.Xaml*",
-	"Microsoft.VCLibs.140.00.UWP*",
-	"Microsoft.NET.Native.Framework*",
-	"Microsoft.DesktopAppInstaller*"
+    "Microsoft.UI.Xaml*",
+    "Microsoft.VCLibs.140.00.UWP*",
+    "Microsoft.NET.Native.Framework*",
+    "Microsoft.DesktopAppInstaller*"
 )
 
 $capabilitiesToRemove = @(
